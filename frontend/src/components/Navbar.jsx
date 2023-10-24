@@ -18,9 +18,9 @@ const Navbar = () => {
 	};
 	return (
 		<nav className="bg-gray-900 p-4 flex justify-between items-center border-b-2 border-sky-500">
-			{/* {/* <Link to="/home"> */}
+			<a href="/">
 				<div className="text-white text-2xl">Felas Streaming</div>
-			{/* </Link> */}
+			</a> 
 			<input
 				list="browsers"
 				value={searchTerm}
