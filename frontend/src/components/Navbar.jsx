@@ -12,9 +12,9 @@ const Navbar = ({setSearchTerm, searchTerm}) => {
 	}, [searchTerm]);
 
 	return (
-		<nav className="bg-gray-900 p-4 flex justify-between items-center border-b-2 border-sky-500">
+		<nav className="bg-gray-900 p-4 flex justify-between items-center border-b-2 border-amber-400">
 			<a href="/">
-				<div className="text-white text-2xl">Felas Streaming</div>
+				<div className="text-white text-4xl text-amber-400">FELAS STREAMING</div>
 			</a> 
 			<input
 				list="browsers"
@@ -24,15 +24,6 @@ const Navbar = ({setSearchTerm, searchTerm}) => {
 				type="text"
 				placeholder="Título da obra"
 			/>
-			{path !== '/' ? (
-				<datalist id="browsers">
-					<option value="Chrome" />
-					<option value="Firefox" />
-					<option value="Safari" />
-					<option value="Opera" />
-					<option value="Edge" />
-				</datalist>
-			): null}
 		</nav>
 	);
 };
