@@ -1,9 +1,7 @@
 import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
 
-const Navbar = () => {
+const Navbar = ({setSearchTerm, searchTerm}) => {
 	const path = window.location.pathname
-	const [searchTerm, setSearchTerm] = useState("");
 	useEffect(() => {
 		const delayDebounceFn = setTimeout(() => {
 			// Aqui você pode adicionar a lógica de busca com o valor de searchTerm
@@ -13,9 +11,6 @@ const Navbar = () => {
 		return () => clearTimeout(delayDebounceFn);
 	}, [searchTerm]);
 
-	const handleChange = (event) => {
-		setSearchTerm(event.target.value);
-	};
 	return (
 		<nav className="bg-gray-900 p-4 flex justify-between items-center border-b-2 border-sky-500">
 			<a href="/">
@@ -24,7 +19,7 @@ const Navbar = () => {
 			<input
 				list="browsers"
 				value={searchTerm}
-				onChange={handleChange}
+				onChange={(e) => {setSearchTerm(e.currentTarget.value)}}
 				className="bg-white focus:outline-none focus:ring-2 focus:ring-blue-500 rounded-md py-2 px-4 w-80"
 				type="text"
 				placeholder="Título da obra"
