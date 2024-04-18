@@ -19,6 +19,15 @@ const ApiService = {
       console.error('Error fetching data from API:', error);
       return [];
     }
+  },
+  searchMovie: async (searchTerm) => {
+    try {
+      const response = await axios.get(`${host}/search/movie/${searchTerm}`);
+          return response.data;
+    } catch (error) {
+      console.error('Error fetching data from API:', error);
+      return [];
+    }
   }
 };
 

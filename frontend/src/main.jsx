@@ -19,7 +19,7 @@ const router = createBrowserRouter([
 ]);
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-  <>
+  <div className='bg-gray-900'>
     <RouterProvider router={router} />
-  </>
+  </div>
 )
