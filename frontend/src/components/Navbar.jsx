@@ -14,7 +14,7 @@ const Navbar = ({setSearchTerm, searchTerm}) => {
 	return (
 		<nav className="bg-gray-900 p-4 flex justify-between items-center shadow-lg shadow-gray-800 mb-5">
 			<a href="/">
-				<div className="text-white text-4xl text-amber-400">FELAS STREAMING</div>
+				<div className="text-4xl text-amber-400">FELAS STREAMING</div>
 			</a> 
 			<input
 				list="browsers"
